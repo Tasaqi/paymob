@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-1*oq7nn*ih=rvtky(njz&!6ack)_=vy^wrn!#8%)4vtbwuqi+n
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
@@ -124,3 +124,5 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CSV_FILE_PATH = "dummy_medical_dataset.csv"
+
+TESTING_ROOT_URL = "http://127.0.0.1:8000"
