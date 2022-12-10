@@ -11,7 +11,8 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
-
+from urllib.parse import  urljoin
+import  os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -123,6 +124,6 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CSV_FILE_PATH = "dummy_medical_dataset.csv"
+CSV_FILE_PATH = urljoin(os.getcwd(), "dummy_medical_dataset.csv")
 
 TESTING_ROOT_URL = "http://127.0.0.1:8000"
