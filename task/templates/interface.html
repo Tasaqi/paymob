@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>paymob</title>
+</head>
+<body>
+
+<h1>Paymob Backend Code Challenge </h1>
+
+{% block content %}
+  <h2>Search Form </h2>
+    <form action="{% url 'second_view' %}" method="get">
+        <label for="key">Select key</label>
+        <select name="key">
+            {% for key in keys %}
+                <option value="{{ key }}">{{ key }}</option>
+            {% endfor %}
+         </select>
+         <input type="submit" value="Search" />
+    </form>
+{% endblock %}
+</body>
+</html>

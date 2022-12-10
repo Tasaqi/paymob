@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#response {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#response td, #response th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#response tr:nth-child(even){background-color: #f2f2f2;}
+
+#response tr:hover {background-color: #ddd;}
+
+#response th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<h1>Result</h1>
+
+<table id="response">
+    <tr>
+        <th>Key</th>
+        <th>Values</th>
+        <th>Matching Percentage</th>
+      </tr>
+
+      <tr>
+        <td rowspan="{{matches|length}}">{{key}}</td>
+          {% for str, percentage in matches.items %}
+        <td>{{str}}</td>
+        <td>{{percentage}}</td>
+      </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
+
+
